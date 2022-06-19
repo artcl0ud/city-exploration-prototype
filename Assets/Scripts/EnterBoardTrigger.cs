@@ -15,7 +15,7 @@ public class EnterBoardTrigger : MonoBehaviour
         {
             //TODO - Add coroutine/delay to detect in which trigger zone the ball stayed the last/longest to confirm that is the final result
             yield return new WaitForSeconds(.3f);
-            Debug.Log("Ball has arrived in  trigger number " + collision.gameObject.name);
+            Debug.Log("Ball has arrived in trigger number " + collision.gameObject.name);
         }
         StartCoroutine(DelayTriggerResult());
     }
