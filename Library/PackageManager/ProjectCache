@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637911598098390851
-    m_Hash: 2414275631
+      ticks: 637912446755599157
+    m_Hash: 683572748
   m_LockFileStatus:
     m_FilePath: C:/Users/nickj/development/lucky-hit/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637911598098510881
-    m_Hash: 599765783
+      ticks: 637912446755755262
+    m_Hash: 1909380626
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
