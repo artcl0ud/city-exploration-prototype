@@ -9,15 +9,14 @@ public class EnterBoardTrigger : MonoBehaviour
          Debug.Log("Collided with " + collision.gameObject.name);
     }
 
-    void OnTriggerEnter(Collider collision) 
+    public void OnTriggerEnter(Collider collision) 
     {
-        StartCoroutine(DelayTriggerResult());
-
         IEnumerator DelayTriggerResult()
         {
             //TODO - Add coroutine/delay to detect in which trigger zone the ball stayed the last/longest to confirm that is the final result
             yield return new WaitForSeconds(.3f);
             Debug.Log("Ball has arrived in  trigger number " + collision.gameObject.name);
         }
+        StartCoroutine(DelayTriggerResult());
     }
 }
