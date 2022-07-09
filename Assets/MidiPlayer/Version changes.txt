@@ -1,0 +1,65 @@
+Please, read this before updating:
+   - Backup your project
+   - If you experiment errors after updating, please delete the MidiPlayer folder from your project before updating.
+   - Package Manager has some bugs, read here: https://docs.unity3d.com/Manual/upm-errors.html and here https://forum.unity.com/threads/package-manager-not-showing-latest-version-from-asset-store.791718/
+
+Thank for your comments and talks, that help me to make Maestro better.
+
+V2.89.3 - 2022-05-28
+	Update to integrate the last version of Oboe (Fight Android Audio Latency)
+	Change tempo by script with MPTK_CurrentTempo = 120 (before, only MPTK_Speed was able to change the speed)
+	New MVP example to show how integrate in a few lines of script a MIDI device (Maestro Pro) 
+
+V2.89.2 - 2022-03-19
+	Update MidiFilePlayer inspector: add filter on the popup MIDI list for selecting a MIDI.
+	Update TestMidiStream: demo how to play MIDI events with the keyboard. 0-9: play notes, Arrow keys: change preset.
+	Apply Sample Rate setting when loading SoundFont to be able to play Vorbis samples (Thank to Paul).
+	Corrected MidiStreamPlayer which was not able to spatilize the sound (Unity Spatialization).
+	Add exception detection on all callback (like OnEventNotesMidi) to help detecting error in your script.
+	New design for MIDI and SoundFont setup windows. Now works fine with MacOS :-)
+
+V2.89.1 - 2021-10-03
+	Add helper link for the MidiFileLoader inspector and the related page on the web site.
+	Add delayed start to MPTK_Play (Pro version)
+	Add delayed stop to MPTK_Stop (Pro version)
+	Add short script demo for MIDI looping
+	Fix instanciation for all MPTK OnEventxxxx to avoid crash in rare cases.
+	Fix Preset change for channel 9 are now enabled for MidiStreamPlayer
+	Add new kind of demos: MVP (for Minimum Viable Product) has just enough core features to effectively deploy the product
+	MVP Free: MidiLoop and TheSimplestMidiLoader
+	MVP Pro: Spatializer3D for spatializing MIDI by tracks in a few lines of code
+
+V2.89.0 - 2021-08-30
+	Added OnMidiEvent can be used like a preprocessor of the MIDI events: it's possible to change the value of the MIDI events to modify in real time the song playing. [Pro]
+	Added MPTK_TransExcludedChannel method useful to exclude a channel for transposing (in general, channel 9 for drums).
+	Added MPTK_keepPlayingNonLooped properties: when set to true, NoteOff or Duration for non-looped samples are ignored and the samples play through to the end.
+	Synth rate can be set to any value from the inspector or with MPTK_SynthRate.
+	Output rate and buffer size can be modified when playing but only for test purpose.
+	Added changing output rate and buffer size for iOS, but stay experimental.
+	MPTK_ChannelPresetChange: apply bank and preset change even if not available but return false.
+	MPTK_ChannelForcedPresetSet: apply bank and preset change even if not available but return false, able now to force bank.
+	Added MPTK_RealTime properties: real time since the start of the MIDI.
+	Added MPTK_KeepEndTrack properties: when set to true, meta MIDI event End Track are keep. Default is false.
+	Added MPTK_TickLastNote properties: tick position for the last note-on found.
+	Added MPTK_PositionLastNote properties: real time position in millisecond for the last note-on found in the MIDI.
+	Added FootPrint capabilities: search a MIDI from a footprint and calculate a score tempo. [Pro]
+	Added "Channel Exception" (MPTK_TransExcludedChannel) "Apply transpose on all channels except this one. -1 to apply all. Default is 9 because generally it's the drum channel and we don't want to transpose drum instruments!"
+	Added "Real Time" (MPTK_RealTime) "Real time from the start of the playing. Tempo or speed change have no impact."
+	Added "Keep MIDI EndTrack" (MPTK_KeepEndTrack) "When set to true, meta MIDI event End Track are keep and these MIDI events are taken into account for calculate the full duration of the MIDI."
+	Added "Lean Synth Starting" (MPTK_LeanSynthStarting) "Sets the speed of the increase of the volume of the audio source when synth is starting."
+	Added "Keep Playing Non Looped" (MPTK_KeepPlayingNonLooped) "When the option is on, non looped samples (drum samples for the most part) are play through to the end."
+	Added "Release Time Modifier" (MPTK_ReleaseTimeMod) "Multiplier to increase or decrease the default release time defined in the SoundFont for each instrument."
+	Added "Unity Audio Setting" (MPTK_AudioSettingFromUnity) "If checked then synth rate and buffer size will be automatically defined by Unity in accordance of the capacity of the hardware."
+	Added "Synth Rate Free" (MPTK_EnableFreeSynthRate) "Allow free setting of the Synth Rate."
+	Removed full errors stack logging because Unity do the job since version 2019!
+	New site for hosting the API documentation https://mptkapi.paxstellar.com/annotated.html
+	Fixed with SoundFont setup windows, no sample was removed when unselecting banks. 
+	Fixed with SoundFont Effect, modified values in inspector was not saved when running.
+	Fixed with Midi Synth, changing the bank was not taken into account until changing the preset.
+	Fixed for MacOS, opening folders functions did'nt open the finder.
+	Fixed for MacOS, now inspector can change synth output rate (experimental). 
+	Fixed for iOS, now it's possible to change the Attack delay.
+	Fixed for MPTK_ChannelForcedPresetSet, restore default preset from MIDI stream was wrong.
+
+
+*** Read the full version change directly in the Asset/MidiPlayerresource folder 
