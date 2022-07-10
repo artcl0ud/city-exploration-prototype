@@ -37,6 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\GameManager.cs" />
+     <Compile Include="Assets\Scripts\ScreenLogger.cs" />
      <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
      <Compile Include="Assets\Scripts\TriggerHitText.cs" />
      <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
@@ -639,9 +640,6 @@
     <Reference Include="Unity.TextMeshPro">
         <HintPath>C:\Users\nickj\development\lucky-hit\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Searcher.Editor">
-        <HintPath>C:\Users\nickj\development\lucky-hit\Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Runtime">
         <HintPath>C:\Users\nickj\development\lucky-hit\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
     </Reference>
@@ -654,9 +652,6 @@
     <Reference Include="UnityEditor.UI">
         <HintPath>C:\Users\nickj\development\lucky-hit\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.PlasticSCM.Editor">
-        <HintPath>C:\Users\nickj\development\lucky-hit\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Rider.Editor">
         <HintPath>C:\Users\nickj\development\lucky-hit\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
     </Reference>
@@ -668,6 +663,12 @@
     </Reference>
     <Reference Include="UnityEngine.UI">
         <HintPath>C:\Users\nickj\development\lucky-hit\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Searcher.Editor">
+        <HintPath>C:\Users\nickj\development\lucky-hit\Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.PlasticSCM.Editor">
+        <HintPath>C:\Users\nickj\development\lucky-hit\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics">
         <HintPath>C:\Users\nickj\development\lucky-hit\Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
@@ -690,11 +691,11 @@
     <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
         <HintPath>C:\Users\nickj\development\lucky-hit\Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
-        <HintPath>C:\Users\nickj\development\lucky-hit\Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Timeline.Editor">
         <HintPath>C:\Users\nickj\development\lucky-hit\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
+        <HintPath>C:\Users\nickj\development\lucky-hit\Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics.Editor">
         <HintPath>C:\Users\nickj\development\lucky-hit\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
