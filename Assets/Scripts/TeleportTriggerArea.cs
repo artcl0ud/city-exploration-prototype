@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class DoorSceneTransition : MonoBehaviour
+public class TeleportTriggerArea : MonoBehaviour
 {
-    string sceneToLoad = "InGame_LuckyHit";
+    [SerializeField] Object scene;
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Player detected, transitioning...");
-            SceneManager.LoadScene(sceneToLoad);
+            Debug.Log("Player detected, transitioning to" + scene.name);
+            SceneManager.LoadScene(scene.name);
         }
     }
 }

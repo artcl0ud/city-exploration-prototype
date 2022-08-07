@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
     {
         if(Input.GetKeyUp(KeyCode.R))
         {
+            Destroy(this.gameObject);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }

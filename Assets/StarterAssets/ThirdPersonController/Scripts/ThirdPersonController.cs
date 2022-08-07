@@ -14,6 +14,10 @@ namespace StarterAssets
 #endif
     public class ThirdPersonController : MonoBehaviour
     {
+        [Header("Active")]
+        [Tooltip("Displays if this current script is active or not")]
+        public bool Disabled = false;
+        
         [Header("Player")]
         [Tooltip("Move speed of the character in m/s")]
         public float MoveSpeed = 2.0f;
@@ -154,11 +158,14 @@ namespace StarterAssets
 
         private void Update()
         {
-            _hasAnimator = TryGetComponent(out _animator);
+            if(!Disabled)
+            {
+                _hasAnimator = TryGetComponent(out _animator);
 
-            JumpAndGravity();
-            GroundedCheck();
-            Move();
+                JumpAndGravity();
+                GroundedCheck();
+                Move();
+            }
         }
 
         private void LateUpdate()
