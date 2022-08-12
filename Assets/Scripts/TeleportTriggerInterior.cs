@@ -29,7 +29,7 @@ public class TeleportTriggerInterior : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Player detected, warping player to specified coordinates...");
+            Debug.Log("Player detected, warping player to coordinates " + xLocation + ", " + yLocation + ", " + zLocation);
             StartCoroutine("Teleport");
         }
     }

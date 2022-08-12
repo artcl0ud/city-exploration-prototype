@@ -26,6 +26,23 @@ private float ballMovementSpeed = 1;
         }
     }
 
+    void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("Collided with " + collision.gameObject.name);
+    }
+
+    public void OnTriggerEnter(Collider collision) 
+    {
+        string finalResult = collision.gameObject.name;
+        StartCoroutine("FinalResult");
+    }
+
+    IEnumerator FinalResult(string finalResult)
+    {
+        yield return new WaitForSeconds(2f);
+        Debug.Log("Final result: ball landed in " + finalResult);
+    }
+
     ///METHODS
 
     private void MoveBall()
