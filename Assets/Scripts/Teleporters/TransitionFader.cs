@@ -4,12 +4,12 @@ public class TransitionFader : MonoBehaviour
 {
     public Animator animator; 
 
-    public void FadeIn()
+    public void SetFadeInOut()
     {
         animator.SetTrigger("Fade");
     }
 
-    public void FadeOut()
+    public void ResetFadeInOut()
     {
         animator.ResetTrigger("Fade");
     }

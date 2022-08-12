@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
     private void Awake() 
     {
         DontDestroyOnLoad(this.gameObject);
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
     void Update()

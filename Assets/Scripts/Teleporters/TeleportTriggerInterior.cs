@@ -38,13 +38,13 @@ public class TeleportTriggerInterior : MonoBehaviour
     {
         thirdPersonController.Disabled = true;
         yield return new WaitForSeconds(0.01f);
-        transitionFader.FadeIn();
+        transitionFader.SetFadeInOut();
         audioSource.PlayOneShot(doorOpen, 0.7F);
         yield return new WaitForSeconds(1f);
         player.transform.position = new Vector3 (xLocation, yLocation, zLocation);
         yield return new WaitForSeconds(1f);
         audioSource.PlayOneShot(doorClose, 0.7F);
-        transitionFader.FadeIn();
+        transitionFader.SetFadeInOut();
         yield return new WaitForSeconds(0.01f);
         thirdPersonController.Disabled = false;
     }
