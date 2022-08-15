@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - CinemachineTarget
+  - LuckyHitBoard_ResultTrigger
+  - Surface_Water
+  - Surface_Grass
+  - Surface_Concrete
   layers:
   - Default
   - TransparentFX
@@ -11,7 +16,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - FootstepSoundEffectSurface
   - 
   - 
   - 
