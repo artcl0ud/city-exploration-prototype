@@ -8,7 +8,7 @@ TagManager:
   - LuckyHitBoard_ResultTrigger
   - Surface_Water
   - Surface_Grass
-  - Surface_Concrete
+  - Surface_General
   layers:
   - Default
   - TransparentFX

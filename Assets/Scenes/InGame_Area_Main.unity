@@ -814,7 +814,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -876,7 +876,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1496,7 +1496,7 @@ GameObject:
   - component: {fileID: 807014958}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Surface_Concrete
+  m_TagString: Surface_General
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1601,7 +1601,7 @@ AudioSource:
   MinDistance: 1
   MaxDistance: 14.893492
   Pan2D: 0
-  rolloffMode: 1
+  rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -2606,9 +2606,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 899a6febcf56eeb4dae918eb8d807dbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Footsteps_General: []
-  Footsteps_Water: []
-  Footsteps_Grass: []
+  thirdPersonController: {fileID: 0}
+  animator: {fileID: 0}
+  Footsteps_General:
+  - {fileID: 8300000, guid: 2f84914e78cc4fe4d89ea9ad65c3ac3f, type: 3}
+  - {fileID: 8300000, guid: a4bf9e8d41077ac47bff8f44c75b269c, type: 3}
+  - {fileID: 8300000, guid: a26babb757c608543a405b54b50e9df9, type: 3}
+  - {fileID: 8300000, guid: 598b8c20edf967c4a8d4af0e59a9b440, type: 3}
+  - {fileID: 8300000, guid: 26ceda3d650919343810e5961dcf4740, type: 3}
+  - {fileID: 8300000, guid: d189270144419f54982d3637433df9bb, type: 3}
+  - {fileID: 8300000, guid: 88df8c0b7c2f63d46ba5ea697e525b5e, type: 3}
+  - {fileID: 8300000, guid: 294f9fa105ee47145a18cfa661cf118c, type: 3}
+  - {fileID: 8300000, guid: 11be24678adb30f48a106cebd4cc7799, type: 3}
+  - {fileID: 8300000, guid: 14284aa1a167b44488ae8e549e6e2fad, type: 3}
+  Footsteps_Water:
+  - {fileID: 8300000, guid: e30068ab7bf018c4b90dd30166ef42f0, type: 3}
+  - {fileID: 8300000, guid: 1aab9431b8195a6449337c348eae33a1, type: 3}
+  - {fileID: 8300000, guid: 8332456627259ad4d8751c15fbd3d7d9, type: 3}
+  - {fileID: 8300000, guid: dcb28c55d0ad97e4b988b0fd91645623, type: 3}
+  - {fileID: 8300000, guid: 6187003a8b57fc549901c7d7cfc06001, type: 3}
+  - {fileID: 8300000, guid: 78b455a1f99c90243b9991879475b833, type: 3}
+  - {fileID: 8300000, guid: 99fd0d6b11505ee47bbe5c1b68027553, type: 3}
+  - {fileID: 8300000, guid: 48375279c14a9e741bd992cdfb6fe794, type: 3}
+  Footsteps_Grass:
+  - {fileID: 8300000, guid: cd9ef7c58ac10924f85e793f6d799122, type: 3}
+  - {fileID: 8300000, guid: 2bf3b960e3055d54bb546da4bd8e9b9a, type: 3}
+  - {fileID: 8300000, guid: 7d4ea457a3b16f84f8978e1f47e5e58c, type: 3}
+  - {fileID: 8300000, guid: defbe072a52159a4298122d3cf078cfd, type: 3}
+  audioSource: {fileID: 0}
   SurfaceIndicator: 
 --- !u!82 &1366983723
 AudioSource:
@@ -3823,9 +3848,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 899a6febcf56eeb4dae918eb8d807dbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thirdPersonController: {fileID: 0}
+  animator: {fileID: 0}
   Footsteps_General: []
   Footsteps_Water: []
   Footsteps_Grass: []
+  audioSource: {fileID: 0}
   SurfaceIndicator: 
 --- !u!1 &2051779736
 GameObject:

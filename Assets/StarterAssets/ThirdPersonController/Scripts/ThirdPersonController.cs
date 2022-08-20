@@ -106,7 +106,8 @@ namespace StarterAssets
         private PlayerInput _playerInput;
 #endif
         private Animator _animator;
-        private CharacterController _controller;
+        public CharacterController _controller;
+        public FootstepManager footStepManager;
         private StarterAssetsInputs _input;
         private GameObject _mainCamera;
 
@@ -145,6 +146,7 @@ namespace StarterAssets
             _input = GetComponent<StarterAssetsInputs>();
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
             _playerInput = GetComponent<PlayerInput>();
+            footStepManager = GameObject.Find("FootstepManager").GetComponent<FootstepManager>();
 #else
 			Debug.LogError( "Starter Assets package is missing dependencies. Please use Tools/Starter Assets/Reinstall Dependencies to fix it");
 #endif
@@ -376,16 +378,9 @@ namespace StarterAssets
                 GroundedRadius);
         }
 
-        private void OnFootstep(AnimationEvent animationEvent)
+        public void OnFootstep(AnimationEvent animationEvent)
         {
-            if (animationEvent.animatorClipInfo.weight > 0.5f)
-            {
-                if (FootstepAudioClips.Length > 0)
-                {
-                    var index = Random.Range(0, FootstepAudioClips.Length);
-                    AudioSource.PlayClipAtPoint(FootstepAudioClips[index], transform.TransformPoint(_controller.center), FootstepAudioVolume);
-                }
-            }
+            footStepManager.OnFootstepAudio(animationEvent);
         }
 
         private void OnLand(AnimationEvent animationEvent)

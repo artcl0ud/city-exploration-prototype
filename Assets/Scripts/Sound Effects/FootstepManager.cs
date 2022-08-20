@@ -5,7 +5,8 @@ using StarterAssets;
 
 public class FootstepManager : MonoBehaviour
 {
-    public ThirdPersonController thirdPersonController; 
+    public ThirdPersonController thirdPersonController;
+    public Animator animator;
 
     public AudioClip[] Footsteps_General;
     public AudioClip[] Footsteps_Water;
@@ -18,36 +19,43 @@ public class FootstepManager : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        thirdPersonController = GameObject.Find("PlayerArmature").GetComponent<ThirdPersonController>();
+        animator = GameObject.Find("PlayerArmature").GetComponent<Animator>();
     }
 
-    public void FootstepSoundSwitcher()
+    public void OnFootstepAudio(AnimationEvent animationEvent)
     {
-        //SurfaceIndicator = hitData.collider.gameObject.tag;
-        
         Ray ray = new Ray(transform.position, Vector3.down);
         RaycastHit hitData;
         Debug.DrawRay(ray.origin, ray.direction * 1);
-
         Physics.Raycast(ray, out hitData);
 
-        if (Physics.Raycast(ray, out hitData) && SurfaceIndicator == hitData.collider.gameObject.tag);
+        SurfaceIndicator = hitData.collider.gameObject.tag;
+
+        if (SurfaceIndicator == "Surface_General" && animationEvent.animatorClipInfo.weight > 0.5f)
         {
-            if(SurfaceIndicator == "Footsteps_General")
+            if (Footsteps_General.Length > 0)
             {
                 var index = Random.Range(0, Footsteps_General.Length);
-                audioSource.PlayOneShot(Footsteps_General[index]);
+                AudioSource.PlayClipAtPoint(Footsteps_General[index], transform.TransformPoint(thirdPersonController._controller.center), thirdPersonController.FootstepAudioVolume);
             }
+        }
 
-            if(SurfaceIndicator == "Footsteps_Water")
+        if (SurfaceIndicator == "Surface_Grass" && animationEvent.animatorClipInfo.weight > 0.5f)
+        {
+            if (Footsteps_Grass.Length > 0)
             {
-                var index = Random.Range(0, Footsteps_General.Length);
-                audioSource.PlayOneShot(Footsteps_General[index]);
+                var index = Random.Range(0, Footsteps_Grass.Length);
+                AudioSource.PlayClipAtPoint(Footsteps_Grass[index], transform.TransformPoint(thirdPersonController._controller.center), thirdPersonController.FootstepAudioVolume);
             }
+        }
 
-            if(SurfaceIndicator == "Footsteps_Grass")
+        if (SurfaceIndicator == "Surface_Water" && animationEvent.animatorClipInfo.weight > 0.5f)
+        {
+            if (Footsteps_Water.Length > 0)
             {
-                var index = Random.Range(0, Footsteps_General.Length);
-                audioSource.PlayOneShot(Footsteps_General[index]);
+                var index = Random.Range(0, Footsteps_Water.Length);
+                AudioSource.PlayClipAtPoint(Footsteps_Water[index], transform.TransformPoint(thirdPersonController._controller.center), thirdPersonController.FootstepAudioVolume);
             }
         }
     }
