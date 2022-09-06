@@ -95,6 +95,8 @@
     <string>Tetris2</string>
     <string>The Christmas Song</string>
     <string>To Make the End of Battle</string>
+    <string>Track1</string>
+    <string>Track2</string>
     <string>Van Morrison - Moondance</string>
     <string>Van Morrison - Wild Nights</string>
     <string>Void World's 2nd Half</string>

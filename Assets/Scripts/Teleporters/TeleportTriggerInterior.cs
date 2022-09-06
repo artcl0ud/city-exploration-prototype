@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using StarterAssets;
+using MidiPlayerTK;
 
 public class TeleportTriggerInterior : MonoBehaviour
 {
@@ -18,11 +19,19 @@ public class TeleportTriggerInterior : MonoBehaviour
     [SerializeField] float yLocation;
     [SerializeField] float zLocation;
 
+    [SerializeField] private string musicToStart;
+    MidiFilePlayer midiFilePlayer;
+
+    private void Awake() 
+    {
+        midiFilePlayer = GameObject.Find("MidiFilePlayer").GetComponent<MidiFilePlayer>();
+    }
+    
     void Start()
     {
         thirdPersonController = GameObject.Find("PlayerArmature").GetComponent<ThirdPersonController>();
         transitionFader = GameObject.Find("BlackFadeInOut").GetComponent<TransitionFader>();
-        audioSource = GetComponent<AudioSource>(); 
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -31,6 +40,9 @@ public class TeleportTriggerInterior : MonoBehaviour
         {
             Debug.Log("Player detected, warping player to coordinates " + xLocation + ", " + yLocation + ", " + zLocation);
             StartCoroutine("Teleport");
+            midiFilePlayer.MPTK_Stop();
+            midiFilePlayer.MPTK_MidiName = musicToStart;
+            midiFilePlayer.MPTK_Play();
         }
     }
 

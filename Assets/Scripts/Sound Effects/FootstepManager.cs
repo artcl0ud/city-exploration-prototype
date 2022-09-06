@@ -11,6 +11,8 @@ public class FootstepManager : MonoBehaviour
     public AudioClip[] Footsteps_General;
     public AudioClip[] Footsteps_Water;
     public AudioClip[] Footsteps_Grass;
+    public AudioClip[] Footsteps_Wood;
+    public AudioClip[] Footsteps_Metal;
 
     public AudioSource audioSource;
 
@@ -56,6 +58,24 @@ public class FootstepManager : MonoBehaviour
             {
                 var index = Random.Range(0, Footsteps_Water.Length);
                 AudioSource.PlayClipAtPoint(Footsteps_Water[index], transform.TransformPoint(thirdPersonController._controller.center), thirdPersonController.FootstepAudioVolume);
+            }
+        }
+
+        if (SurfaceIndicator == "Surface_Wood" && animationEvent.animatorClipInfo.weight > 0.5f)
+        {
+            if (Footsteps_Wood.Length > 0)
+            {
+                var index = Random.Range(0, Footsteps_Wood.Length);
+                AudioSource.PlayClipAtPoint(Footsteps_Wood[index], transform.TransformPoint(thirdPersonController._controller.center), thirdPersonController.FootstepAudioVolume);
+            }
+        }
+
+        if (SurfaceIndicator == "Surface_Metal" && animationEvent.animatorClipInfo.weight > 0.5f)
+        {
+            if (Footsteps_Metal.Length > 0)
+            {
+                var index = Random.Range(0, Footsteps_Metal.Length);
+                AudioSource.PlayClipAtPoint(Footsteps_Metal[index], transform.TransformPoint(thirdPersonController._controller.center), thirdPersonController.FootstepAudioVolume);
             }
         }
     }

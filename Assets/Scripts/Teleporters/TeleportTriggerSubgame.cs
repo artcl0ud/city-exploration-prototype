@@ -17,8 +17,6 @@ public class TeleportTriggerSubgame : MonoBehaviour
     [SerializeField] public Button SubgameEnterButton;
     [SerializeField] public Button SubgameExitButton;
 
-    [SerializeField] private bool IsInStartSubgameRange;
-
     [SerializeField] private float xExitLocation;
     [SerializeField] private float yExitLocation;
     [SerializeField] private float zExitLocation;
@@ -46,7 +44,6 @@ public class TeleportTriggerSubgame : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player"))
         {
-            IsInStartSubgameRange = true;
             Debug.Log("Enable UI Button");
             SubgameEnterCanvas.enabled = true;
         }
@@ -56,7 +53,7 @@ public class TeleportTriggerSubgame : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player"))
         {
-            IsInStartSubgameRange = false;
+            Debug.Log("Disable UI Button");
             SubgameEnterCanvas.enabled = false;
         }
     }

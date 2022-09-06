@@ -9,6 +9,8 @@ TagManager:
   - Surface_Water
   - Surface_Grass
   - Surface_General
+  - Surface_Wood
+  - Surface_Metal
   layers:
   - Default
   - TransparentFX
