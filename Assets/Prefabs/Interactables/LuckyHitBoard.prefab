@@ -343,7 +343,7 @@ GameObject:
   - component: {fileID: 8282609227304317003}
   m_Layer: 0
   m_Name: 4
-  m_TagString: Untagged
+  m_TagString: LuckyHitBoard_ResultTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -614,7 +614,7 @@ GameObject:
   - component: {fileID: 8282609227738473058}
   m_Layer: 0
   m_Name: 3
-  m_TagString: Untagged
+  m_TagString: LuckyHitBoard_ResultTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -753,7 +753,7 @@ GameObject:
   - component: {fileID: 8282609227838066476}
   m_Layer: 0
   m_Name: 1
-  m_TagString: Untagged
+  m_TagString: LuckyHitBoard_ResultTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1052,7 +1052,7 @@ GameObject:
   - component: {fileID: 8282609228500384943}
   m_Layer: 0
   m_Name: 5
-  m_TagString: Untagged
+  m_TagString: LuckyHitBoard_ResultTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1450,7 +1450,7 @@ GameObject:
   - component: {fileID: 8282609229287251320}
   m_Layer: 0
   m_Name: 2
-  m_TagString: Untagged
+  m_TagString: LuckyHitBoard_ResultTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
