@@ -182,11 +182,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7831106}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1737312328}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &16839771
@@ -453,7 +453,7 @@ Transform:
   - {fileID: 1686118552}
   - {fileID: 526323842}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &111797622
 GameObject:
@@ -2093,8 +2093,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: {fileID: 102900000, guid: 4bbf4780cbec19545828aeff93ef1fb9, type: 3}
-  playerEnterPosition: {x: 0, y: 0, z: 0}
-  Player: {fileID: 0}
+  player: {fileID: 0}
   SubgameEnterButton: {fileID: 0}
   SubgameExitButton: {fileID: 970216199}
   xExitLocation: 1.35
@@ -3072,8 +3071,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: {fileID: 102900000, guid: 287224a8cb952c54a9c0d98ca4fb3116, type: 3}
-  playerEnterPosition: {x: 0, y: 0, z: 0}
-  Player: {fileID: 0}
+  player: {fileID: 0}
   SubgameEnterButton: {fileID: 1313951524}
   SubgameExitButton: {fileID: 0}
   xExitLocation: 0
@@ -4269,6 +4267,7 @@ Transform:
   - {fileID: 111797623}
   - {fileID: 1851053131}
   - {fileID: 2065650304}
+  - {fileID: 7831109}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
