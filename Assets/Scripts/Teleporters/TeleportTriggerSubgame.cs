@@ -7,7 +7,8 @@ using StarterAssets;
 
 public class TeleportTriggerSubgame : MonoBehaviour
 {
-    TransitionFader transitionFader;
+    ThirdPersonController thirdPersonController;
+    Transitions transitionFader;
 
     [SerializeField] Object scene;
     [SerializeField] GameObject player;
@@ -31,7 +32,7 @@ public class TeleportTriggerSubgame : MonoBehaviour
 
     void Start() 
     {
-        transitionFader = GameObject.Find("BlackFadeInOut").GetComponent<TransitionFader>();
+        transitionFader = GameObject.Find("BlackFadeInOut").GetComponent<Transitions>();
 
         SubgameEnterCanvas.enabled = false;
         SubgameExitCanvas.enabled = false;
@@ -82,6 +83,7 @@ public class TeleportTriggerSubgame : MonoBehaviour
         yield return new WaitForSeconds(0.01f);
         SubgameExitCanvas.enabled = true;
         yield return new WaitForSeconds(0.01f);
+        thirdPersonController.Disabled = true;
         transitionFader.SetFadeInOut();
     }
 
@@ -95,6 +97,7 @@ public class TeleportTriggerSubgame : MonoBehaviour
         yield return new WaitForSeconds(0.01f);
         player.transform.position = new Vector3 (xExitLocation, yExitLocation, zExitLocation);
         yield return new WaitForSeconds(0.01f);
+        thirdPersonController.Disabled = false;
         transitionFader.SetFadeInOut();
     }
 }

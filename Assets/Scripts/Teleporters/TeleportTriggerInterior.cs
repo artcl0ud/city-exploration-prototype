@@ -8,7 +8,7 @@ using MidiPlayerTK;
 public class TeleportTriggerInterior : MonoBehaviour
 {
     ThirdPersonController thirdPersonController;
-    TransitionFader transitionFader;
+    public Transitions transitionFader;
     
     public AudioClip doorOpen;
     public AudioClip doorClose;
@@ -25,12 +25,13 @@ public class TeleportTriggerInterior : MonoBehaviour
     private void Awake() 
     {
         midiFilePlayer = GameObject.Find("MidiFilePlayer").GetComponent<MidiFilePlayer>();
+
     }
     
     void Start()
     {
         thirdPersonController = GameObject.Find("PlayerArmature").GetComponent<ThirdPersonController>();
-        transitionFader = GameObject.Find("BlackFadeInOut").GetComponent<TransitionFader>();
+        transitionFader = GameObject.Find("Transitions").GetComponent<Transitions>();
         audioSource = GetComponent<AudioSource>();
     }
 

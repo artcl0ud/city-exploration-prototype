@@ -10,6 +10,8 @@ public class NPCProximitySpeechBehaviour : MonoBehaviour
     private Button NPCConversationStartButton;
     private Button NPCConversationAnswerButton;
 
+    public Transitions CinematicBarsAnimator;
+
     [SerializeField] private string[] NPCLines;
     private int linesIndex; 
 
@@ -19,6 +21,7 @@ public class NPCProximitySpeechBehaviour : MonoBehaviour
         NPCConversationAnswerCanvas = GameObject.Find("NPCConversationAnswerButton").GetComponent<Canvas>();
         NPCConversationStartButton = GameObject.Find("NPCConversationStartButton").GetComponent<Button>();
         NPCConversationAnswerButton = GameObject.Find("NPCConversationAnswerButton").GetComponent<Button>();
+        CinematicBarsAnimator = GameObject.Find("CutsceneBars").GetComponent<Transitions>();
     }
 
     private void Start()
@@ -36,6 +39,7 @@ public class NPCProximitySpeechBehaviour : MonoBehaviour
         {
             Debug.Log("Enable talk UI");
             NPCConversationStartCanvas.enabled = true;
+            CinematicBarsAnimator.ActivateCutsceneBars();
         }
     }
 
@@ -46,6 +50,7 @@ public class NPCProximitySpeechBehaviour : MonoBehaviour
             Debug.Log("Disable talk UI");
             NPCConversationStartCanvas.enabled = false;
             NPCConversationAnswerCanvas.enabled = false;
+            CinematicBarsAnimator.DeactivateCutsceneBars();
         }
     }
 
