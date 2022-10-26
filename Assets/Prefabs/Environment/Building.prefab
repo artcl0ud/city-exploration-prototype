@@ -669,7 +669,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7047757334688919155}
-  - component: {fileID: 7871855647042404757}
   m_Layer: 0
   m_Name: Building
   m_TagString: Untagged
@@ -708,14 +707,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &7871855647042404757
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2851937578869130635}
-  m_Mesh: {fileID: -4207443722817456029, guid: 19ffed43fa8137c408b289959536ec96, type: 3}
 --- !u!1 &3110906796114608415
 GameObject:
   m_ObjectHideFlags: 0
@@ -1845,7 +1836,6 @@ MonoBehaviour:
   player: {fileID: 0}
   SubgameEnterButton: {fileID: 0}
   SubgameExitButton: {fileID: 0}
-  IsInStartSubgameRange: 0
-  xExitLocation: 0
-  yExitLocation: 0
+  xExitLocation: 1
+  yExitLocation: -11
   zExitLocation: 0

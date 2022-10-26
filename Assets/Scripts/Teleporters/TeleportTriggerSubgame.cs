@@ -75,7 +75,7 @@ public class TeleportTriggerSubgame : MonoBehaviour
 
     IEnumerator EnterSubgameDelay()
     {
-        transitionFader.SetFadeInOut();
+        transitionFader.BlackFadeIn();
         yield return new WaitForSeconds(0.01f);
         SubgameEnterCanvas.enabled = false;
         yield return new WaitForSeconds(0.01f);
@@ -84,12 +84,13 @@ public class TeleportTriggerSubgame : MonoBehaviour
         SubgameExitCanvas.enabled = true;
         yield return new WaitForSeconds(0.01f);
         thirdPersonController.Disabled = true;
-        transitionFader.SetFadeInOut();
+        yield return new WaitForSeconds(0.01f);
+        transitionFader.BlackFadeOut();
     }
 
     IEnumerator ExitSubgameDelay()
     {
-        transitionFader.SetFadeInOut();
+        transitionFader.BlackFadeIn();
         yield return new WaitForSeconds(0.01f);
         SubgameExitCanvas.enabled = false;
         yield return new WaitForSeconds(0.01f);
@@ -98,6 +99,7 @@ public class TeleportTriggerSubgame : MonoBehaviour
         player.transform.position = new Vector3 (xExitLocation, yExitLocation, zExitLocation);
         yield return new WaitForSeconds(0.01f);
         thirdPersonController.Disabled = false;
-        transitionFader.SetFadeInOut();
+        yield return new WaitForSeconds(0.01f);
+        transitionFader.BlackFadeOut();
     }
 }

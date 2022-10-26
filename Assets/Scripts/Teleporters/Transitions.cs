@@ -2,17 +2,17 @@ using UnityEngine;
 
 public class Transitions : MonoBehaviour
 {
-    public Animator FadeAnimator;
+    public Animator BlackFadeAnimator;
     public Animator CinematicBarsAnimator;
 
-    public void SetFadeInOut()
+    public void BlackFadeIn()
     {
-        FadeAnimator.SetTrigger("Fade");
+        BlackFadeAnimator.SetTrigger("Fade");
     }
 
-    public void ResetFadeInOut()
+    public void BlackFadeOut()
     {
-        FadeAnimator.ResetTrigger("Fade");
+        BlackFadeAnimator.SetTrigger("Fade");
     }
 
     public void ActivateCutsceneBars()
