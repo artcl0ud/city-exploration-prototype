@@ -1,2 +1,2 @@
 # lucky-hit
-A ball-dropping gambling game set in a fictional city.
+A city exploration game, made in Unity with C#.
